@@ -1,0 +1,32 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>It ain't the past</title>
+</head>
+<body>
+    <div id="user_profile">
+        <p>Please Wait....</p>
+    </div>
+    <div>
+        <button onclick="getUser()">Click here</button>
+    </div>
+</body>
+
+<script type="text/javascript">
+    async function getUser(){
+        // Get user info from API
+        const api_url = 'https://wz3xerqzac.execute-api.us-east-1.amazonaws.com/prod/user-profile?user_email=tony.lenguyenkhang@gmail.com'
+        const api_response = await fetch(api_url);
+        const api_data = await(api_response).json();
+        
+        console.log(api_data);
+        
+        const div_user_info = document.getElementById('user_profile');
+        div_user_info.innerHTML = api_data['body'];
+        
+    }
+</script>
+</html>
