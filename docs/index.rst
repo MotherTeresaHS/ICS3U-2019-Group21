@@ -12,3 +12,4 @@ My Journal
 Day 1: today, I did the Amplify, IAM, and Lambda function.
 Day 2: today I did the API Gateway, and DynamoDB
 Day 3: today I did the Error Handling, HTML, Cognito
+Day 4: today I did the Cognito, and sign up
